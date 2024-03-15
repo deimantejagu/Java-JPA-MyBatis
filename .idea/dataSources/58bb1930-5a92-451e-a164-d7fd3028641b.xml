@@ -168,14 +168,14 @@
     <schema id="161" parent="2" name="INFORMATION_SCHEMA"/>
     <schema id="162" parent="2" name="PUBLIC">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-03-15.13:43:19</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-03-15.15:42:15</LastIntrospectionLocalTimestamp>
     </schema>
     <user id="163" parent="2" name="SA">
       <Admin>1</Admin>
     </user>
     <sequence id="164" parent="162" name="HIBERNATE_SEQUENCE">
       <DasType>BIGINT|0s</DasType>
-      <SequenceIdentity>1(1)</SequenceIdentity>
+      <SequenceIdentity>1(2)</SequenceIdentity>
     </sequence>
     <table id="165" parent="162" name="GRUPE"/>
     <table id="166" parent="162" name="PASIRENKAMASKURSAS"/>
@@ -201,85 +201,100 @@
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <column id="173" parent="166" name="ID">
+    <key id="173" parent="165" name="CONSTRAINT_4">
+      <ColNames>ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="174" parent="166" name="ID">
       <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="174" parent="166" name="PAVADINIMAS">
+    <column id="175" parent="166" name="PAVADINIMAS">
       <DasType>VARCHAR(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="175" parent="166" name="PRIMARY_KEY_E">
+    <index id="176" parent="166" name="PRIMARY_KEY_E">
       <ColNames>ID</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <column id="176" parent="167" name="ID">
+    <key id="177" parent="166" name="CONSTRAINT_E">
+      <ColNames>ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="178" parent="167" name="ID">
       <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="177" parent="167" name="PAVARDE">
+    <column id="179" parent="167" name="PAVARDE">
       <DasType>VARCHAR(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="178" parent="167" name="VARDAS">
+    <column id="180" parent="167" name="VARDAS">
       <DasType>VARCHAR(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="179" parent="167" name="GRUPE_ID">
+    <column id="181" parent="167" name="GRUPE_ID">
       <DasType>BIGINT|0s</DasType>
       <Position>4</Position>
     </column>
-    <foreign-key id="180" parent="167" name="FKSNDLN615P0AKV4VD8TKEC3AUI">
+    <foreign-key id="182" parent="167" name="FKSNDLN615P0AKV4VD8TKEC3AUI">
       <ColNames>GRUPE_ID</ColNames>
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
       <RefKeyIndexName>PRIMARY_KEY_4</RefKeyIndexName>
       <RefTableName>GRUPE</RefTableName>
     </foreign-key>
-    <index id="181" parent="167" name="PRIMARY_KEY_3">
+    <index id="183" parent="167" name="PRIMARY_KEY_3">
       <ColNames>ID</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="182" parent="167" name="FKSNDLN615P0AKV4VD8TKEC3AUI_INDEX_3">
+    <index id="184" parent="167" name="FKSNDLN615P0AKV4VD8TKEC3AUI_INDEX_3">
       <ColNames>GRUPE_ID</ColNames>
       <NameSurrogate>1</NameSurrogate>
     </index>
-    <column id="183" parent="168" name="STUDENTAI_ID">
+    <key id="185" parent="167" name="CONSTRAINT_3">
+      <ColNames>ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="186" parent="168" name="STUDENTAI_ID">
       <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="184" parent="168" name="PASIRENKAMIKURSAI_ID">
+    <column id="187" parent="168" name="PASIRENKAMIKURSAI_ID">
       <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="185" parent="168" name="FKKKIVVIOB9V49NRQ6RACF8MN5N">
+    <foreign-key id="188" parent="168" name="FKKKIVVIOB9V49NRQ6RACF8MN5N">
       <ColNames>STUDENTAI_ID</ColNames>
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
       <RefKeyIndexName>PRIMARY_KEY_3</RefKeyIndexName>
       <RefTableName>STUDENTAS</RefTableName>
     </foreign-key>
-    <foreign-key id="186" parent="168" name="FKOVFINEQY4N9CVXPO4AH0UDIR3">
+    <foreign-key id="189" parent="168" name="FKOVFINEQY4N9CVXPO4AH0UDIR3">
       <ColNames>PASIRENKAMIKURSAI_ID</ColNames>
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
       <RefKeyIndexName>PRIMARY_KEY_E</RefKeyIndexName>
       <RefTableName>PASIRENKAMASKURSAS</RefTableName>
     </foreign-key>
-    <index id="187" parent="168" name="FKKKIVVIOB9V49NRQ6RACF8MN5N_INDEX_D">
+    <index id="190" parent="168" name="FKKKIVVIOB9V49NRQ6RACF8MN5N_INDEX_D">
       <ColNames>STUDENTAI_ID</ColNames>
       <NameSurrogate>1</NameSurrogate>
     </index>
-    <index id="188" parent="168" name="FKOVFINEQY4N9CVXPO4AH0UDIR3_INDEX_D">
+    <index id="191" parent="168" name="FKOVFINEQY4N9CVXPO4AH0UDIR3_INDEX_D">
       <ColNames>PASIRENKAMIKURSAI_ID</ColNames>
       <NameSurrogate>1</NameSurrogate>
     </index>

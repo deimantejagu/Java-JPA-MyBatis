@@ -5,7 +5,18 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
-    <h:outputLabel value="Hello, world"/>
-</f:view>
+<h:head/>
+<h:body>
+    <h2>Grupes:</h2>
+    <ol>
+        <ui:repeat value="#{grupes.allGrupes}" var="grupe">
+            <li><h:link value="#{grupe.id}" outcome="players?teamId=#{grupe.specialybe}" /></li>
+        </ui:repeat>
+    </ol>
+    <h:form>
+        <h:inputText value="#{grupes.grupeToCreate.specialybe}" required="true" />
+        <h:commandButton value="Sukurti naują grupę: " actionListener="#{grupes.createGrupe()}" action="index?faces-redirect=true"/>
+    </h:form>
+<!--    <h:link outcome="myBatis/grupes" value="MyBatis implementation"/>-->
+</h:body>
 </html>
