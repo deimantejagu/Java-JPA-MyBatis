@@ -7,7 +7,6 @@
         <typeAlias type="com.example.psklab1.mybatis.model.Grupe" alias="Grupe"/>
         <typeAlias type="com.example.psklab1.mybatis.model.PasirenkamasKursas" alias="PasirenkamasKursas"/>
         <typeAlias type="com.example.psklab1.mybatis.model.Studentas" alias="Studentas"/>
-        <typeAlias type="com.example.psklab1.mybatis.model.StudentasPasirenkamasKursas" alias="StudentasPasirenkamasKursas"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -21,6 +20,5 @@
         <mapper resource="mybatis.xml/GrupeMapper.xml"/>
         <mapper resource="mybatis.xml/PasirenkamasKursasMapper.xml"/>
         <mapper resource="mybatis.xml/StudentasMapper.xml"/>
-        <mapper resource="mybatis.xml/StudentasPasirenkamasKursas.xml"/>
     </mappers>
 </configuration>

@@ -11,6 +11,7 @@ import lombok.EqualsAndHashCode;
 @Getter
 @Setter
 @EqualsAndHashCode
+@NamedQuery(name = "Grupe.loadGrupes", query = "SELECT g FROM Grupe g")
 public class Grupe {
     @Id
     @GeneratedValue
