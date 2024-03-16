@@ -1,28 +1,30 @@
 package com.example.psklab1.entities;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
-import lombok.EqualsAndHashCode;
 
 @Entity
 @Getter
 @Setter
 @EqualsAndHashCode
-@NamedQuery(name = "Grupe.loadGrupes", query = "SELECT g FROM Grupe g")
-public class Grupe {
+public class Student {
     @Id
     @GeneratedValue
     private Long id;
 
     @Basic(optional = false)
-    private String specialybe;
+    private String name;
 
     @Basic(optional = false)
-    private Integer kursas;
+    private String lastName;
 
-    @OneToMany(mappedBy = "grupe")
-    private List<Studentas> studentai;
+    @ManyToOne
+    private StudentGroup studentGroup;
+
+    @ManyToMany
+    private List<OptionalCourse> optionalCourses;
 }

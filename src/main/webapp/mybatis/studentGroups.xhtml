@@ -5,18 +5,19 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+
 <h:head/>
 <h:body>
-    <h2>Grupes:</h2>
+    <h2>Teams:</h2>
     <ol>
-        <ui:repeat value="#{studentGroups.allStudentGroups}" var="studentGroup">
+        <ui:repeat value="#{studentGroupsMyBatis.allStudentGroups}" var="team">
             <li><h:link value="#{studentGroup.specialty}" outcome="studentGroups?studentGroupId=#{studentGroup.id}" /></li>
         </ui:repeat>
     </ol>
     <h:form>
-        <h:inputText value="#{studentGroups.studentGroupToCreate.specialty}" required="true" />
-        <h:commandButton value="Create new group: " actionListener="#{studentGroups.createStudentGroup()}" action="index?faces-redirect=true"/>
+        <h:inputText value="#{studentGroupsMyBatis.studentGroupToCreate.specialty}" required="true" />
+        <h:commandButton value="Add new group" action="#{studentGroupsMyBatis.createStudentGroup()}" />
     </h:form>
-    <h:link outcome="mybatis/studentGroups.xhtml" value="MyBatis implementation"/>
+    <h:link value="Back to index" outcome="/index"/>
 </h:body>
 </html>

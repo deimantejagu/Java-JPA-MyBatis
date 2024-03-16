@@ -11,14 +11,14 @@ import java.util.List;
 @Getter
 @Setter
 @EqualsAndHashCode
-public class PasirenkamasKursas {
+public class OptionalCourse {
     @Id
     @GeneratedValue
     private Long id;
 
     @Basic(optional = false)
-    private String pavadinimas;
+    private String name;
 
-    @ManyToMany(mappedBy = "pasirenkamiKursai")
-    private List<Studentas> studentai;
+    @ManyToMany(mappedBy = "optionalCourses")
+    private List<Student> students;
 }

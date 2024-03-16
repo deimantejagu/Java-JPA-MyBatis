@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias type="com.example.psklab1.mybatis.model.Grupe" alias="Grupe"/>
-        <typeAlias type="com.example.psklab1.mybatis.model.PasirenkamasKursas" alias="PasirenkamasKursas"/>
-        <typeAlias type="com.example.psklab1.mybatis.model.Studentas" alias="Studentas"/>
+        <typeAlias type="com.example.psklab1.mybatis.model.StudentGroup" alias="StudentGroup"/>
+        <typeAlias type="com.example.psklab1.mybatis.model.OptionalCourse" alias="OptionalCourse"/>
+        <typeAlias type="com.example.psklab1.mybatis.model.Student" alias="Student"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -17,8 +17,8 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mybatis.xml/GrupeMapper.xml"/>
-        <mapper resource="mybatis.xml/PasirenkamasKursasMapper.xml"/>
-        <mapper resource="mybatis.xml/StudentasMapper.xml"/>
+        <mapper resource="mybatis.xml/StudentGroupMapper.xml"/>
+        <mapper resource="mybatis.xml/OptionalCourseMapper.xml"/>
+        <mapper resource="mybatis.xml/StudentMapper.xml"/>
     </mappers>
 </configuration>

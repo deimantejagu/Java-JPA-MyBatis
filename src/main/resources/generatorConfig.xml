@@ -17,13 +17,13 @@
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.psklab1.mybatis.dao" targetProject="MAVEN" />
 
 
-        <table schema="public" tableName="grupe">
+        <table schema="public" tableName="studentGroup">
             <generatedKey column="id" identity="true" sqlStatement="JDBC" />
         </table>
-        <table schema="public" tableName="pasirenkamasKursas">
+        <table schema="public" tableName="optionalCourse">
             <generatedKey column="id" identity="true" sqlStatement="JDBC" />
         </table>
-        <table schema="public" tableName="studentas">
+        <table schema="public" tableName="student">
             <generatedKey column="id" identity="true" sqlStatement="JDBC" />
         </table>
     </context>
