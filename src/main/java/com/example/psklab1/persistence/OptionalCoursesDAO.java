@@ -2,10 +2,13 @@ package com.example.psklab1.persistence;
 
 import com.example.psklab1.entities.OptionalCourse;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 
-public class OptionalCourseDAO {
+@ApplicationScoped
+public class OptionalCoursesDAO {
     @Inject
     private EntityManager entityManager;
 
@@ -13,7 +16,11 @@ public class OptionalCourseDAO {
         this.entityManager.persist(optionalCourse);
     }
 
-    public OptionalCourse update(OptionalCourse optionalCourse){
-        return entityManager.merge(optionalCourse);
+    public OptionalCourse merge(OptionalCourse optionalCourse){
+        return this.entityManager.merge(optionalCourse);
+    }
+
+    public void flush() {
+        this.entityManager.flush();
     }
 }

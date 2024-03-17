@@ -18,8 +18,4 @@ public class StudentsDAO {
     public Student findOne(Long id){
         return entityManager.find(Student.class, id);
     }
-
-    public Student update(Student student){
-        return entityManager.merge(student);
-    }
 }

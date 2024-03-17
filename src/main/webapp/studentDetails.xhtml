@@ -4,8 +4,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
-    <h:outputLabel value="Hello, world"/>
-</f:view>
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head/>
+<h:body>
+    <h2>#{optionalCourses.student.name} #{optionalCourses.student.lastName} optional courses</h2>
+    <ol>
+        <ui:repeat value="#{optionalCourses.student.optionalCourses}" var="optionalCourse">
+            <li><h:link value="#{optionalCourse.name}" outcome="students?optionalCourseId=#{optionalCourse.id}" /></li>
+        </ui:repeat>
+    </ol>
+    <h:form>
+        <h:inputText p:placeholder="Course name" value="#{optionalCourses.optionalCourseToCreate.name}" required="true" />
+        <br/><br/>
+        <h:commandButton value="Add optional course"
+                         actionListener="#{optionalCourses.createOptionalCourse}"
+                         action="#{'studentDetails?faces-redirect=true&amp;studentId='.concat(optionalCourses.student.id)}">
+            <f:param name="studentId" value="#{optionalCourses.student.id}" />
+        </h:commandButton>
+    </h:form>
+    <h:link outcome="students" value="Back to students page"/>
+</h:body>
 </html>
