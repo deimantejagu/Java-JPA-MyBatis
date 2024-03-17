@@ -10,16 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80d639cb-007a-472e-b0f9-b93a20d74e99" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/OptionalCourses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58bb1930-5a92-451e-a164-d7fd3028641b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58bb1930-5a92-451e-a164-d7fd3028641b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/OptionalCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/OptionalCourse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/OptionalCourseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/OptionalCoursesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/OptionalCoursesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/OptionalCoursesDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/rest/contracts/StudentDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentDetails.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentDetails.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/students.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/students.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/OptionalCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/OptionalCourses.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,6 +186,7 @@
       <workItem from="1710511147828" duration="5674000" />
       <workItem from="1710516859504" duration="1777000" />
       <workItem from="1710673349758" duration="10915000" />
+      <workItem from="1710705710216" duration="1830000" />
     </task>
     <servers />
   </component>

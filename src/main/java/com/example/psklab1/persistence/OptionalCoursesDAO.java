@@ -6,6 +6,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
+import java.util.Optional;
 
 @ApplicationScoped
 public class OptionalCoursesDAO {
@@ -16,11 +17,13 @@ public class OptionalCoursesDAO {
         this.entityManager.persist(optionalCourse);
     }
 
-    public OptionalCourse merge(OptionalCourse optionalCourse){
-        return this.entityManager.merge(optionalCourse);
-    }
-
-    public void flush() {
-        this.entityManager.flush();
+    public Optional<OptionalCourse> findByName(String name) {
+        try {
+            return Optional.of(entityManager.createQuery("SELECT oc FROM OptionalCourse oc WHERE oc.name = :name", OptionalCourse.class)
+                    .setParameter("name", name)
+                    .getSingleResult());
+        } catch (NoResultException e) {
+            return Optional.empty();
+        }
     }
 }

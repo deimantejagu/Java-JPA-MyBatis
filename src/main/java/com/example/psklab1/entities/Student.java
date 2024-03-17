@@ -29,13 +29,4 @@ public class Student {
 
     @ManyToMany
     private List<OptionalCourse> optionalCourses;
-
-    public void addOptionalCourse(OptionalCourse optionalCourse) {
-        if (optionalCourses == null) {
-            optionalCourses = new ArrayList<>();
-        }
-        optionalCourses.add(optionalCourse);
-        optionalCourse.getStudents().add(this);
-    }
-
 }

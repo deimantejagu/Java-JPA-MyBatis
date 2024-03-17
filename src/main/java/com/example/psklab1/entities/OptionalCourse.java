@@ -22,12 +22,4 @@ public class OptionalCourse {
 
     @ManyToMany(mappedBy = "optionalCourses")
     private List<Student> students;
-
-    public void addStudent(Student student) {
-        if (students == null) {
-            students = new ArrayList<>();
-        }
-        students.add(student);
-        student.getOptionalCourses().add(this);
-    }
 }

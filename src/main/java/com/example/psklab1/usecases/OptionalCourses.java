@@ -13,6 +13,7 @@ import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import java.util.Map;
+import java.util.Optional;
 
 @Model
 public class OptionalCourses {
@@ -37,14 +38,18 @@ public class OptionalCourses {
     }
 
     @Transactional
-    public void createOptionalCourse() {
-        if (optionalCourseToCreate.getId() == null) {
-            optionalCoursesDAO.persist(optionalCourseToCreate);
+    public String createOptionalCourse() {
+        Optional<OptionalCourse> existingCourse = optionalCoursesDAO.findByName(optionalCourseToCreate.getName());
+
+        if (existingCourse.isPresent()) {
+            student.getOptionalCourses().add(existingCourse.get());
         } else {
-            optionalCourseToCreate = optionalCoursesDAO.merge(optionalCourseToCreate);
+            optionalCoursesDAO.persist(optionalCourseToCreate);
+            student.getOptionalCourses().add(optionalCourseToCreate);
         }
-        optionalCourseToCreate.addStudent(this.student);
-        this.student.addOptionalCourse(optionalCourseToCreate);
-//        optionalCoursesDAO.flush();
+
+        studentsDAO.update(student);
+
+        return "success";
     }
 }
