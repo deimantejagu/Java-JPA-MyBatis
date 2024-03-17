@@ -10,23 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80d639cb-007a-472e-b0f9-b93a20d74e99" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58bb1930-5a92-451e-a164-d7fd3028641b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58bb1930-5a92-451e-a164-d7fd3028641b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58bb1930-5a92-451e-a164-d7fd3028641b/storage_v2/_src_/database/DEMODB.oRH6dw/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58bb1930-5a92-451e-a164-d7fd3028641b/storage_v2/_src_/database/DEMODB.oRH6dw/schema/INFORMATION_SCHEMA.NBgcMw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentsForGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/dao/OptionalcourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/dao/OptionalCourseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/dao/StudentgroupMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/dao/StudentGroupMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/model/Optionalcourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/model/OptionalCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/model/Studentgroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/model/StudentGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentGroupDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentGroupsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/rest/StudentController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentGroups.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentGroupsMyBatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentGroupsMyBatis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis.xml/OptionalcourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis.xml/OptionalcourseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis.xml/StudentgroupMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis.xml/StudentgroupMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/sudentGroups.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentDetails.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/mybatis/optionalCourses.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/mybatis/studentGroups.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/mybatis/students.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/students.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/students.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/students.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="jsf" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -195,7 +188,7 @@
       <workItem from="1710496108270" duration="6395000" />
       <workItem from="1710511147828" duration="5674000" />
       <workItem from="1710516859504" duration="1777000" />
-      <workItem from="1710673349758" duration="5137000" />
+      <workItem from="1710673349758" duration="10915000" />
     </task>
     <servers />
   </component>

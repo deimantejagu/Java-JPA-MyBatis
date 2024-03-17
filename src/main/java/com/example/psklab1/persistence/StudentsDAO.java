@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
 @ApplicationScoped
-public class StudentDAO {
+public class StudentsDAO {
     @Inject
     private EntityManager entityManager;
 
@@ -15,7 +15,7 @@ public class StudentDAO {
         this.entityManager.persist(student);
     }
 
-    public Student findOne(Integer id){
+    public Student findOne(Long id){
         return entityManager.find(Student.class, id);
     }
 

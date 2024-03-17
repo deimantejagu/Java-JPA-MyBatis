@@ -1,7 +1,7 @@
 package com.example.psklab1.usecases;
 
 import com.example.psklab1.entities.StudentGroup;
-import com.example.psklab1.persistence.StudentGroupDAO;
+import com.example.psklab1.persistence.StudentGroupsDAO;
 import lombok.Getter;
 import lombok.Setter;
 import javax.transaction.Transactional;
@@ -14,7 +14,7 @@ import java.util.List;
 @Model
 public class StudentGroups {
     @Inject
-    StudentGroupDAO studentGroupDAO;
+    StudentGroupsDAO studentGroupsDAO;
 
     @Getter @Setter
     private StudentGroup studentGroupToCreate = new StudentGroup();
@@ -29,10 +29,10 @@ public class StudentGroups {
 
     @Transactional
     public void createStudentGroup() {
-        this.studentGroupDAO.persist(studentGroupToCreate);
+        this.studentGroupsDAO.persist(studentGroupToCreate);
     }
 
     private void loadAllGroups() {
-        this.allStudentGroups = studentGroupDAO.loadAll();
+        this.allStudentGroups = studentGroupsDAO.loadAll();
     }
 }

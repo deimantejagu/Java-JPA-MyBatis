@@ -11,6 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @EqualsAndHashCode
+@NamedQuery(name = "Student.findAll", query = "select s from Student as s")
 public class Student {
     @Id
     @GeneratedValue
