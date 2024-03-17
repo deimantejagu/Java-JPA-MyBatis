@@ -4,7 +4,7 @@ import com.example.psklab1.entities.StudentGroup;
 import com.example.psklab1.persistence.StudentGroupDAO;
 import lombok.Getter;
 import lombok.Setter;
-import org.mybatis.cdi.Transactional;
+import javax.transaction.Transactional;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.inject.Model;

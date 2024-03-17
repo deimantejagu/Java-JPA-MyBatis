@@ -1,7 +1,7 @@
 package com.example.psklab1.usecases;
 
-import com.example.psklab1.mybatis.dao.StudentgroupMapper;
-import com.example.psklab1.mybatis.model.Studentgroup;
+import com.example.psklab1.mybatis.dao.StudentGroupMapper;
+import com.example.psklab1.mybatis.model.StudentGroup;
 import lombok.Getter;
 import lombok.Setter;
 import org.mybatis.cdi.Transactional;
@@ -14,13 +14,13 @@ import java.util.List;
 @Model
 public class StudentGroupsMyBatis {
     @Inject
-    private StudentgroupMapper studentGroupMapper;
+    private StudentGroupMapper studentGroupMapper;
 
     @Getter
-    private List<Studentgroup> allStudentGroups;
+    private List<StudentGroup> allStudentGroups;
 
     @Getter @Setter
-    private Studentgroup studentGroupToCreate = new Studentgroup();
+    private StudentGroup studentGroupToCreate = new StudentGroup();
 
     @PostConstruct
     public void init() {
