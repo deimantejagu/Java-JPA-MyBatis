@@ -3,8 +3,8 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
 >
 <h:head/>
@@ -12,7 +12,7 @@
     <h2>Students who are in the #{studentsForGroup.studentGroup.specialty} #{studentsForGroup.studentGroup.course} course</h2>
     <ol>
         <ui:repeat value="#{studentsForGroup.studentGroup.students}" var="student">
-            <li><h:link value="#{student.name} - #{student.lastName}" outcome="studentDetails?studentId=#{student.id}" /></li>
+            <li>#{student.name} - #{student.lastName}</li>
         </ui:repeat>
     </ol>
     <h:form>
@@ -21,11 +21,10 @@
         <h:inputText p:placeholder="Last name" value="#{studentsForGroup.studentToCreate.lastName}" required="true" />
         <br/><br/>
         <h:commandButton value="Add student to the group"
-                         actionListener="#{studentsForGroup.createStudent}"
                          action="#{'students?faces-redirect=true&amp;studentGroupId='.concat(studentsForGroup.studentGroup.id)}">
             <f:param name="studentGroupId" value="#{studentsForGroup.studentGroup.id}" />
         </h:commandButton>
     </h:form>
-    <h:link outcome="index" value="Back to groups page"/>
+    <h:link outcome="/mybatis/studentGroups.xhtml" value="Back to groups page"/>
 </h:body>
 </html>

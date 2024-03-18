@@ -10,17 +10,17 @@
 <h:body>
     <h2>Groups</h2>
     <ol>
-        <ui:repeat value="#{studentGroups.allStudentGroups}" var="studentGroup">
+        <ui:repeat value="#{studentGroupsMyBatis.allStudentGroups}" var="studentGroup">
             <li><h:link value="#{studentGroup.specialty} #{studentGroup.course}" outcome="students?studentGroupId=#{studentGroup.id}" /></li>
         </ui:repeat>
     </ol>
     <h:form>
-        <h:inputText p:placeholder="Speciality" value="#{studentGroups.studentGroupToCreate.specialty}" required="true" />
+        <h:inputText p:placeholder="Speciality" value="#{studentGroupsMyBatis.studentGroupToCreate.specialty}" required="true" />
         <br/><br/>
-        <h:inputText p:placeholder="Course number" value="#{studentGroups.studentGroupToCreate.course}" required="true" />
+        <h:inputText p:placeholder="Course number" value="#{studentGroupsMyBatis.studentGroupToCreate.course}" required="true" />
         <br/><br/>
-        <h:commandButton value="Create new group" actionListener="#{studentGroups.createStudentGroup}" action="index?faces-redirect=true"/>
+        <h:commandButton value="Create new group" actionListener="#{studentGroupsMyBatis.createStudentGroup}" action="index?faces-redirect=true"/>
     </h:form>
-    <h:link outcome="mybatis/studentGroups.xhtml" value="MyBatis implementation"/>
+    <h:link value="Back to index" outcome="/index"/>
 </h:body>
 </html>
