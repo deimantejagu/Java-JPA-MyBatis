@@ -12,6 +12,7 @@ import javax.enterprise.inject.Model;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -34,11 +35,12 @@ public class OptionalCourses {
         Map<String, String> requestParameters =
                 FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
         Long studentId = Long.parseLong(requestParameters.get("studentId"));
+        System.out.println( "StudentId " + studentId);
         this.student = studentsDAO.findOne(studentId);
     }
 
     @Transactional
-    public String createOptionalCourse() {
+    public void createOptionalCourse() {
         Optional<OptionalCourse> existingCourse = optionalCoursesDAO.findByName(optionalCourseToCreate.getName());
 
         if (existingCourse.isPresent()) {
@@ -49,7 +51,10 @@ public class OptionalCourses {
         }
 
         studentsDAO.update(student);
+    }
 
-        return "success";
+    public List<Student> getStudentsByCourseId(Long courseId) {
+        System.out.println( "CourseId " + courseId);
+        return optionalCoursesDAO.findOne(courseId).getStudents();
     }
 }

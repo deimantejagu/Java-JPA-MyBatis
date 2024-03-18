@@ -26,4 +26,8 @@ public class OptionalCoursesDAO {
             return Optional.empty();
         }
     }
+
+    public OptionalCourse findOne(Long courseId) {
+        return entityManager.find(OptionalCourse.class, courseId);
+    }
 }

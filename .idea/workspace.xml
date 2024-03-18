@@ -10,13 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80d639cb-007a-472e-b0f9-b93a20d74e99" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58bb1930-5a92-451e-a164-d7fd3028641b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58bb1930-5a92-451e-a164-d7fd3028641b.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/courseStudents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/courseStudents.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/OptionalCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/OptionalCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/OptionalCoursesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/OptionalCoursesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/rest/ApiConfiguration.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/OptionalCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/OptionalCourses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentDetails.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentDetails.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +88,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\webapp" />
+      <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\resources" />
       <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\resources\mybatis.xml" />
       <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\java\com\example\psklab1\mybatis" />
       <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\webapp\mybatis" />
@@ -186,7 +187,8 @@
       <workItem from="1710511147828" duration="5674000" />
       <workItem from="1710516859504" duration="1777000" />
       <workItem from="1710673349758" duration="10915000" />
-      <workItem from="1710705710216" duration="1830000" />
+      <workItem from="1710705710216" duration="1955000" />
+      <workItem from="1710761552043" duration="3242000" />
     </task>
     <servers />
   </component>
