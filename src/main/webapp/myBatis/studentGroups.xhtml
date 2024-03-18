@@ -19,7 +19,7 @@
         <br/><br/>
         <h:inputText p:placeholder="Course number" value="#{studentGroupsMyBatis.studentGroupToCreate.course}" required="true" />
         <br/><br/>
-        <h:commandButton value="Create new group" actionListener="#{studentGroupsMyBatis.createStudentGroup}" action="index?faces-redirect=true"/>
+        <h:commandButton value="Create new group" action="#{studentGroupsMyBatis.createStudentGroup}"/>
     </h:form>
     <h:link value="Back to index" outcome="/index"/>
 </h:body>

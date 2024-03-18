@@ -10,13 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80d639cb-007a-472e-b0f9-b93a20d74e99" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/mybatis/studentGroups.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/mybatis/students.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58bb1930-5a92-451e-a164-d7fd3028641b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58bb1930-5a92-451e-a164-d7fd3028641b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/courseStudents.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/courseStudents.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/dao/OptionalCourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/dao/OptionalCourseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/dao/StudentGroupMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/dao/StudentGroupMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/dao/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/dao/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/model/OptionalCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/model/OptionalCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/model/StudentGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/mybatis/model/StudentGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentGroupsMyBatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentGroupsMyBatis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MyBatisConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MyBatisConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis.xml/OptionalcourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/xml/OptionalcourseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis.xml/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/xml/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis.xml/StudentgroupMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/xml/StudentgroupMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentDetails.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentDetails.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/students.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/students.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/mybatis/studentGroups.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/myBatis/studentGroups.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/mybatis/students.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/myBatis/students.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,11 +96,11 @@
       <recent name="com.example.psklab1.entities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\resources\mybatis" />
       <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\webapp" />
       <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\resources" />
       <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\resources\mybatis.xml" />
       <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\java\com\example\psklab1\mybatis" />
-      <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\webapp\mybatis" />
     </key>
   </component>
   <component name="RunManager">

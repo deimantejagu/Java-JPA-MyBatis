@@ -21,10 +21,10 @@
         <h:inputText p:placeholder="Last name" value="#{studentsForGroup.studentToCreate.lastName}" required="true" />
         <br/><br/>
         <h:commandButton value="Add student to the group"
-                         action="#{'students?faces-redirect=true&amp;studentGroupId='.concat(studentsForGroup.studentGroup.id)}">
+                         action="#{studentsForGroup.createStudent}">
             <f:param name="studentGroupId" value="#{studentsForGroup.studentGroup.id}" />
         </h:commandButton>
     </h:form>
-    <h:link outcome="/mybatis/studentGroups.xhtml" value="Back to groups page"/>
+    <h:link outcome="/myBatis/studentGroups.xhtml" value="Back to groups page"/>
 </h:body>
 </html>
