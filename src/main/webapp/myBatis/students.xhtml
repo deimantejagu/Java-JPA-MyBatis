@@ -9,22 +9,22 @@
 >
 <h:head/>
 <h:body>
-    <h2>Students who are in the #{studentsForGroup.studentGroup.specialty} #{studentsForGroup.studentGroup.course} course</h2>
+    <h2>Students who are in the #{studentsForGroupMyBatis.studentGroup.specialty} #{studentsForGroupMyBatis.studentGroup.course} course</h2>
     <ol>
-        <ui:repeat value="#{studentsForGroup.studentGroup.students}" var="student">
-            <li>#{student.name} - #{student.lastName}</li>
+        <ui:repeat value="#{studentsForGroupMyBatis.getStudentsForGroup(studentsForGroupMyBatis.studentGroup.id)}" var="student">
+            <li>#{student.name} - #{student.lastname}</li>
         </ui:repeat>
     </ol>
     <h:form>
-        <h:inputText p:placeholder="Name" value="#{studentsForGroup.studentToCreate.name}" required="true" />
+        <h:inputText p:placeholder="Name" value="#{studentsForGroupMyBatis.studentToCreate.name}" required="true" />
         <br/><br/>
-        <h:inputText p:placeholder="Last name" value="#{studentsForGroup.studentToCreate.lastName}" required="true" />
+        <h:inputText p:placeholder="Last name" value="#{studentsForGroupMyBatis.studentToCreate.lastname}" required="true" />
         <br/><br/>
         <h:commandButton value="Add student to the group"
-                         action="#{studentsForGroup.createStudent}">
-            <f:param name="studentGroupId" value="#{studentsForGroup.studentGroup.id}" />
+                         action="#{studentsForGroupMyBatis.createStudent}">
+            <f:param name="studentGroupId" value="#{studentsForGroupMyBatis.studentGroup.id}" />
         </h:commandButton>
     </h:form>
-    <h:link outcome="/myBatis/studentGroups.xhtml" value="Back to groups page"/>
+    <h:link value="Back to groups page" outcome="/myBatis/studentGroups.xhtml"/>
 </h:body>
 </html>
