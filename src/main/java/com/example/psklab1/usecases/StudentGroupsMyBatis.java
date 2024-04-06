@@ -42,13 +42,6 @@ public class StudentGroupsMyBatis {
         return "/myBatis/studentGroups?faces-redirect=true";
     }
 
-//    @Transactional
-//    public String deleteStudentGroup(Long id){
-//        studentGroupMapper.deleteByPrimaryKey(id);
-//        loadAllStudentGroups();
-//        return "/myBatis/studentGroups?faces-redirect=true";
-//    }
-
     @Transactional
     public String deleteStudentGroup(Long id) {
         List<Student> students = studentMapper.selectByStudentGroupId(id);
