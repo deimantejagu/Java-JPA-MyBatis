@@ -6,25 +6,28 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
 >
-<h:head/>
+<h:head>
+    <h:outputStylesheet library="css" name="styles.css"/>
+</h:head>
 <h:body>
     <h2>
         Students enrolled in the <i>#{courseStudents.course.name}</i> course
     </h2>
-    <ul>
+    <ol>
         <ui:repeat value="#{courseStudents.students}" var="student">
             <li>
-                <h:link value="#{student.name} #{student.lastName}" outcome="students?studentGroupId=#{student.studentGroup.id}" />
+                <h:link value="#{student.name} #{student.lastName}" outcome="students?studentGroupId=#{student.studentGroup.id}" styleClass="link-button"/>
                 <h:form style="display: inline;">
                     <h:commandButton value="Delete"
                                      actionListener="#{courseStudents.removeStudentFromCourse(student.id)}"
-                                     action="#{'courseStudents?faces-redirect=true&amp;optionalCourseId='.concat(courseStudents.course.id)}">
+                                     action="#{'courseStudents?faces-redirect=true&amp;optionalCourseId='.concat(courseStudents.course.id)}"
+                                     styleClass="form-button-delete">
                         <f:param name="optionalCourseId" value="#{courseStudents.course.id}" />
                     </h:commandButton>
                 </h:form>
             </li>
         </ui:repeat>
-    </ul>
-    <h:link outcome="index" value="Back to home page"/>
+    </ol>
+    <h:link outcome="index" value="Back to home page" styleClass="link-button"/>
 </h:body>
 </html>

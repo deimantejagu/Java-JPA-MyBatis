@@ -9,7 +9,6 @@
 <h:head>
     <h:outputStylesheet library="css" name="styles.css"/>
 </h:head>
-
 <h:body>
     <h2>Groups</h2>
     <ol>
@@ -23,12 +22,12 @@
         </ui:repeat>
     </ol>
     <h:form>
-        <h:inputText p:placeholder="Speciality" value="#{studentGroups.studentGroupToCreate.specialty}" required="true"  styleClass="form-input"/>
+        <h:inputText p:placeholder="Speciality" value="#{studentGroups.studentGroupToCreate.specialty}" required="true" styleClass="form-input"/>
         <br/><br/>
-        <h:inputText p:placeholder="Course number" value="#{studentGroups.studentGroupToCreate.course}" required="true"  styleClass="form-input"/>
+        <h:inputText p:placeholder="Course number" value="#{studentGroups.studentGroupToCreate.course}" required="true" styleClass="form-input"/>
         <br/><br/>
         <h:commandButton value="Create new group" actionListener="#{studentGroups.createStudentGroup}" action="index?faces-redirect=true" styleClass="form-button"/>
     </h:form>
-    <h:link outcome="myBatis/studentGroups.xhtml" value="MyBatis implementation"  styleClass="link-button"/>
+    <h:link outcome="myBatis/studentGroups.xhtml" value="MyBatis implementation" styleClass="link-button"/>
 </h:body>
 </html>

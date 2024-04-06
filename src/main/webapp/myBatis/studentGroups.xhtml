@@ -6,21 +6,25 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
 >
-<h:head/>
+<h:head>
+    <h:outputStylesheet library="css" name="styles.css"/>
+</h:head>
 <h:body>
     <h2>Groups</h2>
     <ol>
         <ui:repeat value="#{studentGroupsMyBatis.allStudentGroups}" var="studentGroup">
-            <li><h:link value="#{studentGroup.specialty} #{studentGroup.course}" outcome="students?studentGroupId=#{studentGroup.id}" /></li>
+            <li>
+                <h:link value="#{studentGroup.specialty} #{studentGroup.course}" outcome="students?studentGroupId=#{studentGroup.id}" styleClass="link-button"/>
+            </li>
         </ui:repeat>
     </ol>
     <h:form>
-        <h:inputText p:placeholder="Speciality" value="#{studentGroupsMyBatis.studentGroupToCreate.specialty}" required="true" />
+        <h:inputText p:placeholder="Speciality" value="#{studentGroupsMyBatis.studentGroupToCreate.specialty}" required="true" styleClass="form-input"/>
         <br/><br/>
-        <h:inputText p:placeholder="Course number" value="#{studentGroupsMyBatis.studentGroupToCreate.course}" required="true" />
+        <h:inputText p:placeholder="Course number" value="#{studentGroupsMyBatis.studentGroupToCreate.course}" required="true" styleClass="form-input"/>
         <br/><br/>
-        <h:commandButton value="Create new group" action="#{studentGroupsMyBatis.createStudentGroup}"/>
+        <h:commandButton value="Create new group" action="#{studentGroupsMyBatis.createStudentGroup}" styleClass="form-button"/>
     </h:form>
-    <h:link value="Back to index" outcome="/index"/>
+    <h:link value="Back to index" outcome="/index" styleClass="link-button"/>
 </h:body>
 </html>

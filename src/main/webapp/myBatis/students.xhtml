@@ -7,24 +7,27 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
 >
-<h:head/>
+<h:head>
+    <h:outputStylesheet library="css" name="styles.css"/>
+</h:head>
 <h:body>
     <h2>Students who are in the #{studentsForGroupMyBatis.studentGroup.specialty} #{studentsForGroupMyBatis.studentGroup.course} course</h2>
     <ol>
-        <ui:repeat value="#{studentsForGroupMyBatis.getStudentsForGroup(studentsForGroupMyBatis.studentGroup.id)}" var="student">
-            <li>#{student.name} - #{student.lastname}</li>
+        <ui:repeat value="#{studentsForGroupMyBatis.getStudentsForGroup(studentsForGroupMyBatis.studentGroup.id)}" var="student" >
+            <li>#{student.name} #{student.lastname}</li>
         </ui:repeat>
     </ol>
     <h:form>
-        <h:inputText p:placeholder="Name" value="#{studentsForGroupMyBatis.studentToCreate.name}" required="true" />
+        <h:inputText p:placeholder="Name" value="#{studentsForGroupMyBatis.studentToCreate.name}" required="true" styleClass="form-input"/>
         <br/><br/>
-        <h:inputText p:placeholder="Last name" value="#{studentsForGroupMyBatis.studentToCreate.lastname}" required="true" />
+        <h:inputText p:placeholder="Last name" value="#{studentsForGroupMyBatis.studentToCreate.lastname}" required="true" styleClass="form-input"/>
         <br/><br/>
         <h:commandButton value="Add student to the group"
-                         action="#{studentsForGroupMyBatis.createStudent}">
+                         action="#{studentsForGroupMyBatis.createStudent}"
+                         styleClass="form-button">
             <f:param name="studentGroupId" value="#{studentsForGroupMyBatis.studentGroup.id}" />
         </h:commandButton>
     </h:form>
-    <h:link value="Back to groups page" outcome="/myBatis/studentGroups.xhtml"/>
+    <h:link value="Back to groups page" outcome="/myBatis/studentGroups.xhtml"  styleClass="link-button"/>
 </h:body>
 </html>

@@ -7,19 +7,22 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
 >
-<h:head/>
+<h:head>
+    <h:outputStylesheet library="css" name="styles.css"/>
+</h:head>
 <h:body>
     <h2>#{optionalCourses.student.name} #{optionalCourses.student.lastName} optional courses</h2>
     <ol>
         <ui:repeat value="#{optionalCourses.student.optionalCourses}" var="optionalCourse">
             <li>
-                <h:link value="#{optionalCourse.name}" outcome="/courseStudents">
+                <h:link value="#{optionalCourse.name}" outcome="/courseStudents" styleClass="link-button">
                     <f:param name="optionalCourseId" value="#{optionalCourse.id}" />
                 </h:link>
                 <h:form style="display: inline;">
                     <h:commandButton value="Delete"
                                      actionListener="#{optionalCourses.removeCourseFromStudent(optionalCourse.id, optionalCourses.student.id)}"
-                                     action="#{'studentDetails?faces-redirect=true&amp;studentId='.concat(optionalCourses.student.id)}">
+                                     action="#{'studentDetails?faces-redirect=true&amp;studentId='.concat(optionalCourses.student.id)}"
+                                     styleClass="form-button-delete">
                         <f:param name="studentId" value="#{optionalCourses.student.id}" />
                     </h:commandButton>
                 </h:form>
@@ -27,14 +30,15 @@
         </ui:repeat>
     </ol>
     <h:form>
-        <h:inputText p:placeholder="Course name" value="#{optionalCourses.optionalCourseToCreate.name}" required="true" />
+        <h:inputText p:placeholder="Course name" value="#{optionalCourses.optionalCourseToCreate.name}" required="true" styleClass="form-input"/>
         <br/><br/>
         <h:commandButton value="Add optional course"
                          actionListener="#{optionalCourses.createOptionalCourse}"
-                         action="#{'studentDetails?faces-redirect=true&amp;studentId='.concat(optionalCourses.student.id)}">
+                         action="#{'studentDetails?faces-redirect=true&amp;studentId='.concat(optionalCourses.student.id)}"
+                         styleClass="form-button">
             <f:param name="studentId" value="#{optionalCourses.student.id}" />
         </h:commandButton>
     </h:form>
-    <h:link outcome="index" value="Back to home page"/>
+    <h:link outcome="index" value="Back to home page" styleClass="link-button"/>
 </h:body>
 </html>
