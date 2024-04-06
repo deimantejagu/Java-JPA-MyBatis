@@ -1,6 +1,7 @@
 package com.example.psklab1.persistence;
 
 import com.example.psklab1.entities.OptionalCourse;
+import com.example.psklab1.entities.Student;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -29,5 +30,9 @@ public class OptionalCoursesDAO {
 
     public OptionalCourse findOne(Long courseId) {
         return entityManager.find(OptionalCourse.class, courseId);
+    }
+
+    public void removeCourseFromStudent(OptionalCourse optionalCourse){
+        entityManager.remove(optionalCourse);
     }
 }

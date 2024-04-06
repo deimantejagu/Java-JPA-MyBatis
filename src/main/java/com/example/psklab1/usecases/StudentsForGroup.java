@@ -33,13 +33,24 @@ public class StudentsForGroup implements Serializable {
     public void init() {
         Map<String, String> requestParameters =
                 FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
-        Long studentGroupId = Long.parseLong(requestParameters.get("studentGroupId"));
+        String studentGroupIdParam = requestParameters.get("studentGroupId");
+
+        Long studentGroupId = Long.parseLong(studentGroupIdParam);
         this.studentGroup = studentGroupsDAO.findOne(studentGroupId);
     }
+
 
     @Transactional
     public void createStudent() {
         studentToCreate.setStudentGroup(this.studentGroup);
         studentsDAO.persist(studentToCreate);
+    }
+
+    @Transactional
+    public void deleteStudent(Long studentId) {
+        Student student = studentsDAO.findOne(studentId);
+        if (student != null) {
+            studentsDAO.delete(student);
+        }
     }
 }

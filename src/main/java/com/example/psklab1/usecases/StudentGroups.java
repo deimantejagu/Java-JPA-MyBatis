@@ -35,4 +35,13 @@ public class StudentGroups {
     private void loadAllGroups() {
         this.allStudentGroups = studentGroupsDAO.loadAll();
     }
+
+    @Transactional
+    public void deleteGroup(Long groupId) {
+        StudentGroup group = studentGroupsDAO.findOne(groupId);
+        if(group != null){
+            studentGroupsDAO.delete(group);
+            loadAllGroups();
+        }
+    }
 }

@@ -9,10 +9,19 @@
 >
 <h:head/>
 <h:body>
-    <h2>Students who are in the #{studentsForGroup.studentGroup.specialty} #{studentsForGroup.studentGroup.course} course</h2>
+    <h2>Students who are in the <i>#{studentsForGroup.studentGroup.specialty} #{studentsForGroup.studentGroup.course}</i> course</h2>
     <ol>
         <ui:repeat value="#{studentsForGroup.studentGroup.students}" var="student">
-            <li><h:link value="#{student.name} - #{student.lastName}" outcome="studentDetails?studentId=#{student.id}" /></li>
+            <li>
+                <h:link value="#{student.name} - #{student.lastName}" outcome="studentDetails?studentId=#{student.id}" />
+                <h:form style="display: inline;">
+                    <h:commandButton value="Delete"
+                                     actionListener="#{studentsForGroup.deleteStudent(student.id)}"
+                                     action="#{'students?faces-redirect=true&amp;studentGroupId='.concat(studentsForGroup.studentGroup.id)}">
+                        <f:param name="studentGroupId" value="#{studentsForGroup.studentGroup.id}" />
+                    </h:commandButton>
+                </h:form>
+            </li>
         </ui:repeat>
     </ol>
     <h:form>

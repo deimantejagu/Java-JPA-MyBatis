@@ -16,6 +16,13 @@
                 <h:link value="#{optionalCourse.name}" outcome="/courseStudents">
                     <f:param name="optionalCourseId" value="#{optionalCourse.id}" />
                 </h:link>
+                <h:form style="display: inline;">
+                    <h:commandButton value="Delete"
+                                     actionListener="#{optionalCourses.removeCourseFromStudent(optionalCourse.id)}"
+                                     action="#{'studentDetails?faces-redirect=true&amp;studentId='.concat(optionalCourses.student.id)}">
+                        <f:param name="studentId" value="#{optionalCourses.student.id}" />
+                    </h:commandButton>
+                </h:form>
             </li>
         </ui:repeat>
     </ol>

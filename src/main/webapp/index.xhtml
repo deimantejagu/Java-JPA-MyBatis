@@ -11,7 +11,12 @@
     <h2>Groups</h2>
     <ol>
         <ui:repeat value="#{studentGroups.allStudentGroups}" var="studentGroup">
-            <li><h:link value="#{studentGroup.specialty} #{studentGroup.course}" outcome="students?studentGroupId=#{studentGroup.id}" /></li>
+            <li>
+                <h:link value="#{studentGroup.specialty} #{studentGroup.course}" outcome="students?studentGroupId=#{studentGroup.id}" />
+                <h:form style="display: inline;">
+                    <h:commandButton value="Delete" action="#{studentGroups.deleteGroup(studentGroup.id)}" />
+                </h:form>
+            </li>
         </ui:repeat>
     </ol>
     <h:form>

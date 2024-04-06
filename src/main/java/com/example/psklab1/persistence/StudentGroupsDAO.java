@@ -23,4 +23,8 @@ public class StudentGroupsDAO {
     public StudentGroup findOne(Long id) {
         return entityManager.find(StudentGroup.class, id);
     }
+
+    public void delete(StudentGroup group){
+        entityManager.remove(group);
+    }
 }

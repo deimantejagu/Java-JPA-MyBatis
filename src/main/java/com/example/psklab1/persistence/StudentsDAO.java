@@ -22,4 +22,12 @@ public class StudentsDAO {
     public void update(Student student) {
         entityManager.merge(student);
     }
+
+    public void delete(Student student){
+        entityManager.remove(student);
+    }
+
+    public void removeStudentFromCourse(Student student){
+        entityManager.remove(student);
+    }
 }

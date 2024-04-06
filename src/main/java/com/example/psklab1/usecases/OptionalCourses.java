@@ -53,8 +53,11 @@ public class OptionalCourses {
         studentsDAO.update(student);
     }
 
-    public List<Student> getStudentsByCourseId(Long courseId) {
-        System.out.println( "CourseId " + courseId);
-        return optionalCoursesDAO.findOne(courseId).getStudents();
+    @Transactional
+    public void removeCourseFromStudent(Long courseId) {
+        OptionalCourse optionalCourse = optionalCoursesDAO.findOne(courseId);
+        if (optionalCourse != null) {
+            optionalCoursesDAO.removeCourseFromStudent(optionalCourse);
+        }
     }
 }
