@@ -50,6 +50,7 @@ public class StudentsForGroup implements Serializable {
     public void deleteStudent(Long studentId) {
         Student student = studentsDAO.findOne(studentId);
         if (student != null) {
+            student.getStudentGroup().getStudents().remove(student);
             studentsDAO.delete(student);
         }
     }

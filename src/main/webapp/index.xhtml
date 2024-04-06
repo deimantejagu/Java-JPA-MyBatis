@@ -6,26 +6,29 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
 >
-<h:head/>
+<h:head>
+    <h:outputStylesheet library="css" name="styles.css"/>
+</h:head>
+
 <h:body>
     <h2>Groups</h2>
     <ol>
         <ui:repeat value="#{studentGroups.allStudentGroups}" var="studentGroup">
             <li>
-                <h:link value="#{studentGroup.specialty} #{studentGroup.course}" outcome="students?studentGroupId=#{studentGroup.id}" />
+                <h:link value="#{studentGroup.specialty} #{studentGroup.course}" outcome="students?studentGroupId=#{studentGroup.id}" styleClass="link-button"/>
                 <h:form style="display: inline;">
-                    <h:commandButton value="Delete" action="#{studentGroups.deleteGroup(studentGroup.id)}" />
+                    <h:commandButton value="Delete" action="#{studentGroups.deleteGroup(studentGroup.id)}" styleClass="form-button-delete"/>
                 </h:form>
             </li>
         </ui:repeat>
     </ol>
     <h:form>
-        <h:inputText p:placeholder="Speciality" value="#{studentGroups.studentGroupToCreate.specialty}" required="true" />
+        <h:inputText p:placeholder="Speciality" value="#{studentGroups.studentGroupToCreate.specialty}" required="true"  styleClass="form-input"/>
         <br/><br/>
-        <h:inputText p:placeholder="Course number" value="#{studentGroups.studentGroupToCreate.course}" required="true" />
+        <h:inputText p:placeholder="Course number" value="#{studentGroups.studentGroupToCreate.course}" required="true"  styleClass="form-input"/>
         <br/><br/>
-        <h:commandButton value="Create new group" actionListener="#{studentGroups.createStudentGroup}" action="index?faces-redirect=true"/>
+        <h:commandButton value="Create new group" actionListener="#{studentGroups.createStudentGroup}" action="index?faces-redirect=true" styleClass="form-button"/>
     </h:form>
-    <h:link outcome="myBatis/studentGroups.xhtml" value="MyBatis implementation"/>
+    <h:link outcome="myBatis/studentGroups.xhtml" value="MyBatis implementation"  styleClass="link-button"/>
 </h:body>
 </html>

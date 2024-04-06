@@ -23,6 +23,6 @@ public class StudentGroup {
     @Basic(optional = false)
     private Integer course;
 
-    @OneToMany(mappedBy = "studentGroup")
+    @OneToMany(mappedBy = "studentGroup", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Student> students;
 }

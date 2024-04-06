@@ -10,18 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80d639cb-007a-472e-b0f9-b93a20d74e99" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/OptionalCoursesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/OptionalCoursesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentGroupsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentGroupsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/OptionalCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/OptionalCourses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentGroups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/StudentGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/StudentGroup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentsForGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentsForGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/courseStudents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/CourseStudents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/courseStudents.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/courseStudents.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentDetails.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentDetails.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/students.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/students.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,11 +85,11 @@
       <recent name="com.example.psklab1.entities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\resources\mybatis" />
-      <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\webapp" />
+      <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\webapp\resources" />
       <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\resources" />
-      <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\resources\mybatis.xml" />
-      <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\java\com\example\psklab1\mybatis" />
+      <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\webapp" />
+      <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\resources\css" />
+      <recent name="C:\Users\deija\IdeaProjects\psk-lab1\src\main\resources\mybatis" />
     </key>
   </component>
   <component name="RunManager">
@@ -194,7 +187,7 @@
       <workItem from="1710673349758" duration="10915000" />
       <workItem from="1710705710216" duration="1955000" />
       <workItem from="1710761552043" duration="4713000" />
-      <workItem from="1712401630073" duration="10340000" />
+      <workItem from="1712401630073" duration="12648000" />
     </task>
     <servers />
   </component>
