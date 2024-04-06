@@ -39,7 +39,6 @@ public class StudentsForGroup implements Serializable {
         this.studentGroup = studentGroupsDAO.findOne(studentGroupId);
     }
 
-
     @Transactional
     public void createStudent() {
         studentToCreate.setStudentGroup(this.studentGroup);

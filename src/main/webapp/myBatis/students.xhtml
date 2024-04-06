@@ -14,7 +14,17 @@
     <h2>Students who are in the #{studentsForGroupMyBatis.studentGroup.specialty} #{studentsForGroupMyBatis.studentGroup.course} course</h2>
     <ol>
         <ui:repeat value="#{studentsForGroupMyBatis.getStudentsForGroup(studentsForGroupMyBatis.studentGroup.id)}" var="student" >
-            <li>#{student.name} #{student.lastname}</li>
+            <li>
+                #{student.name} #{student.lastname}
+                <h:form style="display: inline;">
+                    <h:commandButton value="Delete"
+                                     actionListener="#{studentsForGroupMyBatis.deleteStudent(student.id)}"
+                                     action="#{'students?faces-redirect=true&amp;studentGroupId='.concat(studentsForGroup.studentGroup.id)}"
+                                     styleClass="form-button-delete">
+                        <f:param name="studentGroupId" value="#{studentsForGroupMyBatis.studentGroup.id}" />
+                    </h:commandButton>
+                </h:form>
+            </li>
         </ui:repeat>
     </ol>
     <h:form>

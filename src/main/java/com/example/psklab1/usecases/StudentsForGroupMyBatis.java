@@ -30,10 +30,14 @@ public class StudentsForGroupMyBatis {
 
     @PostConstruct
     public void init() {
-        Map<String, String> requestParameters = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
-        Long studentGroupId = Long.parseLong(requestParameters.get("studentGroupId"));
+        Map<String, String> requestParameters =
+                FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
+        String studentGroupIdParam = requestParameters.get("studentGroupId");
+
+        Long studentGroupId = Long.parseLong(studentGroupIdParam);
         this.studentGroup = studentGroupMapper.selectByPrimaryKey(studentGroupId);
     }
+
 
     public List<Student> getStudentsForGroup(Long studentGroupId) {
         return studentMapper.selectByStudentGroupId(studentGroupId);
@@ -43,6 +47,12 @@ public class StudentsForGroupMyBatis {
     public String createStudent() {
         studentToCreate.setStudentgroupId(studentGroup.getId());
         studentMapper.insert(studentToCreate);
-        return "myBatis/students.xhtml?faces-redirect=true";
+        return "/myBatis/students.xhtml?faces-redirect=true&amp;studentGroupId=" + studentGroup.getId();
+    }
+
+    @Transactional
+    public String deleteStudent(Long id){
+        studentMapper.deleteByPrimaryKey(id);
+        return "/myBatis/students.xhtml?faces-redirect=true&amp;studentGroupId=" + studentGroup.getId();
     }
 }

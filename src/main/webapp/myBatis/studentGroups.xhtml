@@ -15,6 +15,9 @@
         <ui:repeat value="#{studentGroupsMyBatis.allStudentGroups}" var="studentGroup">
             <li>
                 <h:link value="#{studentGroup.specialty} #{studentGroup.course}" outcome="students?studentGroupId=#{studentGroup.id}" styleClass="link-button"/>
+                <h:form style="display: inline;">
+                    <h:commandButton value="Delete" action="#{studentGroupsMyBatis.deleteStudentGroup(studentGroup.id)}" styleClass="form-button-delete"/>
+                </h:form>
             </li>
         </ui:repeat>
     </ol>

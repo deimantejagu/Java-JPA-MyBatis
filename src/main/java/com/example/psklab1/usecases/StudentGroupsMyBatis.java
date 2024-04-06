@@ -1,6 +1,8 @@
 package com.example.psklab1.usecases;
 
 import com.example.psklab1.mybatis.dao.StudentGroupMapper;
+import com.example.psklab1.mybatis.dao.StudentMapper;
+import com.example.psklab1.mybatis.model.Student;
 import com.example.psklab1.mybatis.model.StudentGroup;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,6 +17,9 @@ import java.util.List;
 public class StudentGroupsMyBatis {
     @Inject
     private StudentGroupMapper studentGroupMapper;
+
+    @Inject
+    private StudentMapper studentMapper;
 
     @Getter
     private List<StudentGroup> allStudentGroups;
@@ -35,5 +40,24 @@ public class StudentGroupsMyBatis {
     public String createStudentGroup(){
         studentGroupMapper.insert(studentGroupToCreate);
         return "/myBatis/studentGroups?faces-redirect=true";
+    }
+
+//    @Transactional
+//    public String deleteStudentGroup(Long id){
+//        studentGroupMapper.deleteByPrimaryKey(id);
+//        loadAllStudentGroups();
+//        return "/myBatis/studentGroups?faces-redirect=true";
+//    }
+
+    @Transactional
+    public String deleteStudentGroup(Long id) {
+        List<Student> students = studentMapper.selectByStudentGroupId(id);
+
+        for (Student student : students) {
+            studentMapper.deleteByPrimaryKey(student.getId());
+        }
+
+        studentGroupMapper.deleteByPrimaryKey(id);
+        return "/myBatis/studentGroups.xhtml?faces-redirect=true";
     }
 }
