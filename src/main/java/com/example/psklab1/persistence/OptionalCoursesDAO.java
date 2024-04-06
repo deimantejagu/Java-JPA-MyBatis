@@ -31,8 +31,4 @@ public class OptionalCoursesDAO {
     public OptionalCourse findOne(Long courseId) {
         return entityManager.find(OptionalCourse.class, courseId);
     }
-
-    public void removeCourseFromStudent(OptionalCourse optionalCourse){
-        entityManager.remove(optionalCourse);
-    }
 }

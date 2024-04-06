@@ -18,7 +18,7 @@
                 </h:link>
                 <h:form style="display: inline;">
                     <h:commandButton value="Delete"
-                                     actionListener="#{optionalCourses.removeCourseFromStudent(optionalCourse.id)}"
+                                     actionListener="#{optionalCourses.removeCourseFromStudent(optionalCourse.id, optionalCourses.student.id)}"
                                      action="#{'studentDetails?faces-redirect=true&amp;studentId='.concat(optionalCourses.student.id)}">
                         <f:param name="studentId" value="#{optionalCourses.student.id}" />
                     </h:commandButton>
