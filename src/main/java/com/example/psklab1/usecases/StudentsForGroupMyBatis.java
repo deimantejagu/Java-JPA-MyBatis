@@ -38,7 +38,6 @@ public class StudentsForGroupMyBatis {
         this.studentGroup = studentGroupMapper.selectByPrimaryKey(studentGroupId);
     }
 
-
     public List<Student> getStudentsForGroup(Long studentGroupId) {
         return studentMapper.selectByStudentGroupId(studentGroupId);
     }

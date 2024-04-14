@@ -9,11 +9,15 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 import java.io.IOException;
 
+// Objektas  turi būti sukurtas vienas visai aplikacijai ir išlaikomas
+// per visą aplikacijos gyvavimo ciklą
 @ApplicationScoped
 public class MyBatisResources {
 
+//    Sukuria SqlSessionFactory objektą, kuris bus pasiekiamas visoje aplikacijoje
     @Produces
     @ApplicationScoped
+//    MyBatis komponentas, kuris yra atsakingas už sesijų su duomenų baze kūrimą
     @SessionFactoryProvider
     private SqlSessionFactory produceSqlSessionFactory() {
         try {
