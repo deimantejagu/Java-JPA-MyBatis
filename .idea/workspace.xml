@@ -11,9 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="80d639cb-007a-472e-b0f9-b93a20d74e99" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/MyBatisResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/MyBatisResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/Resources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/Resources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentsForGroupMyBatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentsForGroupMyBatis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/students.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/students.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +187,11 @@
       <workItem from="1712401630073" duration="18863000" />
       <workItem from="1712482010723" duration="5785000" />
       <workItem from="1713021457559" duration="6000" />
-      <workItem from="1713102002395" duration="1597000" />
+      <workItem from="1713102002395" duration="1788000" />
+      <workItem from="1713105077728" duration="745000" />
+      <workItem from="1713181940668" duration="1069000" />
+      <workItem from="1713186369463" duration="31000" />
+      <workItem from="1713192817525" duration="2753000" />
     </task>
     <servers />
   </component>

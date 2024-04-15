@@ -23,6 +23,7 @@
                                      styleClass="form-button-delete">
                         <f:param name="studentGroupId" value="#{studentsForGroup.studentGroup.id}" />
                     </h:commandButton>
+                    #{student.optionalCourses.size()}
                 </h:form>
             </li>
         </ui:repeat>
