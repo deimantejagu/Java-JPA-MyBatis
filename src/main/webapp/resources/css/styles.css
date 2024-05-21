@@ -57,6 +57,15 @@ li {
     display: inline-block;
     margin: 10px;
 }
+.form-button-update {
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px;
+}
 .form-button:hover {
     background-color: #8b0000;
 }

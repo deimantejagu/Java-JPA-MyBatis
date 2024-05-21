@@ -166,11 +166,11 @@
     <collation id="159" parent="2" name="VIETNAMESE_VIETNAM"/>
     <role id="160" parent="2" name="PUBLIC"/>
     <schema id="161" parent="2" name="INFORMATION_SCHEMA">
-      <LastIntrospectionLocalTimestamp>2024-04-06.16:02:47</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-05-21.20:24:40</LastIntrospectionLocalTimestamp>
     </schema>
     <schema id="162" parent="2" name="PUBLIC">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-04-06.16:02:47</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-05-21.20:40:12</LastIntrospectionLocalTimestamp>
     </schema>
     <user id="163" parent="2" name="SA">
       <Admin>1</Admin>
@@ -210,19 +210,19 @@
     <table id="196" parent="161" name="VIEWS"/>
     <sequence id="197" parent="162" name="HIBERNATE_SEQUENCE">
       <DasType>BIGINT|0s</DasType>
-      <SequenceIdentity>1(21)</SequenceIdentity>
+      <SequenceIdentity>1(26)</SequenceIdentity>
     </sequence>
-    <sequence id="198" parent="162" name="SYSTEM_SEQUENCE_D2FAFA08_C83C_46CC_A7C9_E402BCE7084C">
+    <sequence id="198" parent="162" name="SYSTEM_SEQUENCE_69BB66DD_933F_42C8_8EA4_0BB8D0AFA1E1">
       <Comment>#1</Comment>
       <DasType>BIGINT|0s</DasType>
       <NameSurrogate>1</NameSurrogate>
-      <SequenceIdentity>1(28)</SequenceIdentity>
+      <SequenceIdentity>1(26)</SequenceIdentity>
     </sequence>
-    <sequence id="199" parent="162" name="SYSTEM_SEQUENCE_4B596432_05D3_4BF1_9F10_9320DF11A6B5">
+    <sequence id="199" parent="162" name="SYSTEM_SEQUENCE_01ECDD9C_49CD_484B_959E_0306BE39CCE2">
       <Comment>#2</Comment>
       <DasType>BIGINT|0s</DasType>
       <NameSurrogate>1</NameSurrogate>
-      <SequenceIdentity>1(15)</SequenceIdentity>
+      <SequenceIdentity>1(20)</SequenceIdentity>
     </sequence>
     <table id="200" parent="162" name="OPTIONALCOURSE"/>
     <table id="201" parent="162" name="STUDENT"/>
@@ -1428,7 +1428,7 @@
       <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceName>SYSTEM_SEQUENCE_D2FAFA08_C83C_46CC_A7C9_E402BCE7084C</SequenceName>
+      <SequenceName>SYSTEM_SEQUENCE_01ECDD9C_49CD_484B_959E_0306BE39CCE2</SequenceName>
     </column>
     <column id="503" parent="201" name="LASTNAME">
       <DasType>VARCHAR(255)|0s</DasType>
@@ -1440,77 +1440,91 @@
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="505" parent="201" name="STUDENTGROUP_ID">
+    <column id="505" parent="201" name="GROUPOFSTUDENTS">
       <DasType>BIGINT|0s</DasType>
       <Position>4</Position>
     </column>
-    <foreign-key id="506" parent="201" name="FKAMC5S7RCD0JAYGJBKNJFFFLBA">
-      <ColNames>STUDENTGROUP_ID</ColNames>
+    <column id="506" parent="201" name="OPT_LOCK_VERSION">
+      <DasType>INTEGER|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="507" parent="201" name="FKJSVVA7GOFDUVVXYT776HH6381">
+      <ColNames>GROUPOFSTUDENTS</ColNames>
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
-      <RefKeyIndexName>PRIMARY_KEY_D2</RefKeyIndexName>
+      <RefKeyIndexName>FKJSVVA7GOFDUVVXYT776HH6381_INDEX_D</RefKeyIndexName>
       <RefTableName>STUDENTGROUP</RefTableName>
     </foreign-key>
-    <index id="507" parent="201" name="PRIMARY_KEY_A6">
+    <index id="508" parent="201" name="PRIMARY_KEY_A6">
       <ColNames>ID</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="508" parent="201" name="FKAMC5S7RCD0JAYGJBKNJFFFLBA_INDEX_A">
-      <ColNames>STUDENTGROUP_ID</ColNames>
+    <index id="509" parent="201" name="FKJSVVA7GOFDUVVXYT776HH6381_INDEX_A">
+      <ColNames>GROUPOFSTUDENTS</ColNames>
       <NameSurrogate>1</NameSurrogate>
     </index>
-    <column id="509" parent="202" name="ID">
+    <column id="510" parent="202" name="ID">
       <ColumnKind>generated-stored</ColumnKind>
       <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceName>SYSTEM_SEQUENCE_4B596432_05D3_4BF1_9F10_9320DF11A6B5</SequenceName>
+      <SequenceName>SYSTEM_SEQUENCE_69BB66DD_933F_42C8_8EA4_0BB8D0AFA1E1</SequenceName>
     </column>
-    <column id="510" parent="202" name="COURSE">
+    <column id="511" parent="202" name="COURSE">
       <DasType>INTEGER|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="511" parent="202" name="SPECIALTY">
+    <column id="512" parent="202" name="SPECIALTY">
       <DasType>VARCHAR(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="512" parent="202" name="PRIMARY_KEY_D2">
+    <column id="513" parent="202" name="OPT_LOCK_VERSION">
+      <DasType>INTEGER|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>4</Position>
+    </column>
+    <index id="514" parent="202" name="FKJSVVA7GOFDUVVXYT776HH6381_INDEX_D">
       <ColNames>ID</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <column id="513" parent="203" name="STUDENTS_ID">
+    <index id="515" parent="202" name="PRIMARY_KEY_D2">
+      <ColNames>ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <column id="516" parent="203" name="STUDENTS_ID">
       <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="514" parent="203" name="OPTIONALCOURSES_ID">
+    <column id="517" parent="203" name="OPTIONALCOURSES_ID">
       <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="515" parent="203" name="FKTIPLA2M3OR96QMYB3YWMCC8ML">
+    <foreign-key id="518" parent="203" name="FKTIPLA2M3OR96QMYB3YWMCC8ML">
       <ColNames>STUDENTS_ID</ColNames>
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
       <RefKeyIndexName>PRIMARY_KEY_A6</RefKeyIndexName>
       <RefTableName>STUDENT</RefTableName>
     </foreign-key>
-    <foreign-key id="516" parent="203" name="FKC933CVPRF6CGN8C53LQU9P485">
+    <foreign-key id="519" parent="203" name="FKC933CVPRF6CGN8C53LQU9P485">
       <ColNames>OPTIONALCOURSES_ID</ColNames>
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
       <RefKeyIndexName>PRIMARY_KEY_5</RefKeyIndexName>
       <RefTableName>OPTIONALCOURSE</RefTableName>
     </foreign-key>
-    <index id="517" parent="203" name="FKTIPLA2M3OR96QMYB3YWMCC8ML_INDEX_8">
+    <index id="520" parent="203" name="FKTIPLA2M3OR96QMYB3YWMCC8ML_INDEX_8">
       <ColNames>STUDENTS_ID</ColNames>
       <NameSurrogate>1</NameSurrogate>
     </index>
-    <index id="518" parent="203" name="FKC933CVPRF6CGN8C53LQU9P485_INDEX_8">
+    <index id="521" parent="203" name="FKC933CVPRF6CGN8C53LQU9P485_INDEX_8">
       <ColNames>OPTIONALCOURSES_ID</ColNames>
       <NameSurrogate>1</NameSurrogate>
     </index>

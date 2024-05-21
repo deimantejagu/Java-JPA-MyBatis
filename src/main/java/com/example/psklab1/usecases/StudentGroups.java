@@ -4,11 +4,16 @@ import com.example.psklab1.entities.StudentGroup;
 import com.example.psklab1.persistence.StudentGroupsDAO;
 import lombok.Getter;
 import lombok.Setter;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+import javax.persistence.OptimisticLockException;
 import javax.transaction.Transactional;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;
+import java.io.IOException;
 import java.util.List;
 
 @Model
@@ -21,6 +26,9 @@ public class StudentGroups {
 
     @Getter
     private List<StudentGroup> allStudentGroups;
+
+    @Getter @Setter
+    private StudentGroup studentGroupToEdit;
 
     @PostConstruct
     public void init() {
@@ -43,5 +51,23 @@ public class StudentGroups {
             studentGroupsDAO.delete(group);
             loadAllGroups();
         }
+    }
+
+    @Transactional
+    public String updateStudentGroup(StudentGroup studentGroup, String specialty, Integer course) {
+        if (studentGroup != null) {
+            try {
+                studentGroup.setSpecialty(specialty);
+                studentGroup.setCourse(course);
+                Thread.sleep(1000);
+                studentGroupsDAO.update(studentGroup);
+            } catch (OptimisticLockException ole) {
+                return "index?faces-redirect=true&error=optimistic-lock-exception";
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            return "index?faces-redirect=true";
+        }
+        return null;
     }
 }

@@ -23,6 +23,10 @@ public class StudentGroup {
     @Basic(optional = false)
     private Integer course;
 
+    @Version
+    @Column(name = "OPT_LOCK_VERSION")
+    private Integer version = 0;
+
     @OneToMany(mappedBy = "studentGroup", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Student> students;
 }

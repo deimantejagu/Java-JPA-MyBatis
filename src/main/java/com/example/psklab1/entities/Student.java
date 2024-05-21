@@ -25,6 +25,7 @@ public class Student {
     private String lastName;
 
     @ManyToOne
+    @JoinColumn(name = "groupOfStudents")
     private StudentGroup studentGroup;
 
     @ManyToMany
