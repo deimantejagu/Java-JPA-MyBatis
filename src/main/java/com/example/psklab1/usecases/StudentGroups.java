@@ -1,6 +1,7 @@
 package com.example.psklab1.usecases;
 
 import com.example.psklab1.entities.StudentGroup;
+import com.example.psklab1.interfaces.LoggedInvocation;
 import com.example.psklab1.persistence.StudentGroupsDAO;
 import lombok.Getter;
 import lombok.Setter;
@@ -54,6 +55,7 @@ public class StudentGroups {
     }
 
     @Transactional
+    @LoggedInvocation
     public String updateStudentGroup(StudentGroup studentGroup, String specialty, Integer course) {
         if (studentGroup != null) {
             try {

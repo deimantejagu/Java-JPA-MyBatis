@@ -10,29 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80d639cb-007a-472e-b0f9-b93a20d74e99" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/Greetings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/StudentGreetingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/TeacherGreetingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Specializes/DefaultErrorMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Specializes/Error.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Specializes/OptimisticLockErrorMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/interfaces/ErrorMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/interfaces/GreetingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/rest/ApiConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/rest/StudentsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/rest/contracts/StudentGroupDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58bb1930-5a92-451e-a164-d7fd3028641b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58bb1930-5a92-451e-a164-d7fd3028641b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/GreetingDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/PoliteGreetingDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/interceptors/MethodLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/interfaces/LoggedInvocation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/StudentGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/entities/StudentGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentGroupsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/persistence/StudentGroupsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/Greetings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/Greetings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentGroups.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/xml/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/xml/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +73,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.gutterIcons",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.JavaScript",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -217,7 +202,8 @@
       <workItem from="1713192817525" duration="4458000" />
       <workItem from="1714999611266" duration="1000" />
       <workItem from="1716289303471" duration="1070000" />
-      <workItem from="1716306672423" duration="22067000" />
+      <workItem from="1716306672423" duration="22111000" />
+      <workItem from="1716366259701" duration="3081000" />
     </task>
     <servers />
   </component>

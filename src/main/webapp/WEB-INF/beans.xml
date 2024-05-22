@@ -6,4 +6,12 @@
     <alternatives>
         <class>com.example.psklab1.Services.Alternative.TeacherGreetingService</class>
     </alternatives>
+
+    <interceptors>
+        <class>com.example.psklab1.interceptors.MethodLogger</class>
+    </interceptors>
+
+    <decorators>
+        <class>com.example.psklab1.Services.Alternative.PoliteGreetingDecorator</class>
+    </decorators>
 </beans>

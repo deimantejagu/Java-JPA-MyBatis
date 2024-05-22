@@ -12,7 +12,7 @@ import javax.inject.Named;
 @RequestScoped
 public class Greetings {
     @Inject
-    private GreetingService greetingService;
+    private GreetingService greetingService; // Čia CDI automatiškai injektiuos tinkamą dekoratorių, jei jis yra konfigūruotas
 
     @Setter
     @Getter
@@ -21,6 +21,6 @@ public class Greetings {
     private String greeting;
 
     public void generateGreeting() {
-        greeting = greetingService.greet(name);
+        greeting = greetingService.greet(name); // Bus naudojamas dekoruotas pasisveikinimas, jei dekoratorius yra aktyvuotas
     }
 }
