@@ -6,15 +6,12 @@ import com.example.psklab1.persistence.StudentGroupsDAO;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
 import javax.persistence.OptimisticLockException;
 import javax.transaction.Transactional;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;
-import java.io.IOException;
 import java.util.List;
 
 @Model

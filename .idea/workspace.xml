@@ -10,14 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80d639cb-007a-472e-b0f9-b93a20d74e99" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/GreetingDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/PoliteGreetingDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/interceptors/MethodLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/interfaces/LoggedInvocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/GenerateStudentNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentNumberGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/Greetings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/Greetings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/StudentGroups.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +201,7 @@
       <workItem from="1714999611266" duration="1000" />
       <workItem from="1716289303471" duration="1070000" />
       <workItem from="1716306672423" duration="22111000" />
-      <workItem from="1716366259701" duration="3081000" />
+      <workItem from="1716366259701" duration="12504000" />
     </task>
     <servers />
   </component>
