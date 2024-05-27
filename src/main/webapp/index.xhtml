@@ -52,11 +52,7 @@
         <h:link outcome="myBatis/studentGroups.xhtml" value="MyBatis implementation" styleClass="link-button"/>
     </h:form>
     <h:form id="generateForm">
-        <h:commandButton value="Generate Student Number" action="#{studentNumberGenerator.generateNumber}">
-            <f:ajax execute="@form" render="statusMessage generatedNumber" />
-        </h:commandButton>
-        <h:outputText id="statusMessage" value="#{studentNumberGenerator.statusMessage}" style="color: red;" />
-        <h:outputText id="generatedNumber" value="#{studentNumberGenerator.generatedNumber}" style="color: green;" />
+        <h:commandButton disabled="#{generateStudentNumber.studentNumberGeneratorRunning}" value="Generate Student Number" action="#{generateStudentNumber.generateNewStudentNumber()}" />
     </h:form>
 </h:body>
 </html>

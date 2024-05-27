@@ -27,14 +27,4 @@ public class GenerateStudentNumber implements Serializable {
     public boolean isStudentNumberGeneratorRunning() {
         return studentNumberGeneratorTask != null && !studentNumberGeneratorTask.isDone();
     }
-
-    public String getStudentNumberGeneratorStatus() throws ExecutionException, InterruptedException {
-        if(studentNumberGeneratorTask == null) {
-            return null;
-        } else if (isStudentNumberGeneratorRunning()) {
-            return "Student number generation is in progress";
-        }
-
-        return "Student number " + studentNumberGeneratorTask.get();
-    }
 }
