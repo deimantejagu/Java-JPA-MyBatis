@@ -11,9 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="80d639cb-007a-472e-b0f9-b93a20d74e99" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/Greetings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/Greetings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/PoliteGreetingDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/Services/Alternative/PoliteGreetingDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/GenerateStudentNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/psklab1/usecases/GenerateStudentNumber.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +197,9 @@
       <workItem from="1716289303471" duration="1070000" />
       <workItem from="1716306672423" duration="22111000" />
       <workItem from="1716366259701" duration="12580000" />
-      <workItem from="1716791469255" duration="4868000" />
+      <workItem from="1716791469255" duration="5125000" />
+      <workItem from="1716808660350" duration="521000" />
+      <workItem from="1716814373876" duration="787000" />
     </task>
     <servers />
   </component>

@@ -27,9 +27,9 @@
                 <li>
                     <h:link value="#{studentGroup.specialty} #{studentGroup.course}" outcome="students?studentGroupId=#{studentGroup.id}" styleClass="link-button"/>
                     <h:form style="display: inline;">
-                        <h:commandButton value="Delete" action="#{studentGroups.deleteGroup(studentGroup.id)}" styleClass="form-button-delete">
-                            <f:ajax render=":messages" />
-                        </h:commandButton>
+<!--                        <h:commandButton value="Delete" action="#{studentGroups.deleteGroup(studentGroup.id)}" styleClass="form-button-delete">-->
+<!--                            <f:ajax render=":messages" />-->
+<!--                        </h:commandButton>-->
                     </h:form>
                     <h:form>
                         <h:inputText value="#{studentGroup.specialty}" title="Specialty"/>
