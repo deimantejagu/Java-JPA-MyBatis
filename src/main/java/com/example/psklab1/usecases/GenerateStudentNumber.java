@@ -19,6 +19,7 @@ public class GenerateStudentNumber implements Serializable {
 
     @LoggedInvocation
     public String generateNewStudentNumber() {
+//        throw new RuntimeException();
         studentNumberGeneratorTask = CompletableFuture.supplyAsync(() -> studentNumberGenerator.generateNumber());
 
         return "index.xhtml?faces-redirect=true";
